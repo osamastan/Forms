@@ -1,0 +1,126 @@
+body,
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  text-align: center;
+  max-width: 90%;
+}
+
+.img-1 {
+  position: relative;
+  top: -50px;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+h1 {
+  margin: 10px 50px 60px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-top: 10px;
+}
+
+.options p {
+  margin: 0;
+  color: blue;
+  font-size: x-large;
+  background-color: rgb(197, 197, 255);
+  padding: 20px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.name {
+  position: absolute;
+  top: 15px;
+  right: 65px;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  gap: 700px;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.pages p {
+  color: blue;
+  font-size: large;
+  background-color: rgb(197, 197, 255);
+  padding: 15px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0;
+  
+}
+.pages a{
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .options {
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .pages {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .options {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .pages {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  h1 {
+    margin: 10px;
+    font-size: 1.2rem;
+  }
+
+  .name {
+    font-size: 1rem;
+    top: 10px;
+    right: 10px;
+  }
+
+  .icon {
+    top: 5px;
+    right: 5px;
+  }
+}

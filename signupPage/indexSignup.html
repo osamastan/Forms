@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="../signupPage/styleSignup.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Signup</h1>
+      <form method="post" onsubmit="return validateForm()">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>First Name</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Last Name</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="email" required>
+          <span></span>
+          <label>Email Address</label>
+        </div>
+        <div class="txt_field">
+          <input type="tel" pattern="[0-9]{10}" required>
+          <span></span>
+          <label>Phone Number</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="confirm_password" required>
+          <span></span>
+          <label>Confirm Password</label>
+        </div>
+        <input type="submit" value="Signup">
+        <div class="signup_link">
+          Already a member? <a href="../loginPage/indexLogin.html">Login</a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // Function to ensure passwords match
+      function validateForm() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
+        if (password !== confirmPassword) {
+          alert("Passwords do not match!");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
